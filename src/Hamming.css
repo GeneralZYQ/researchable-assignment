@@ -1,0 +1,24 @@
+.Hamming {
+  text-align: center;
+}
+
+body {
+	background-color: #CC0000;
+}
+
+.PlotTitle {
+	color: white;
+}
+
+.numberInput {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#forkButton {
+	position: absolute;
+	top: 100px;
+	right: 10px;
+	background-color: #00CC00;
+}
