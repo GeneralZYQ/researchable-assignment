@@ -56,6 +56,14 @@ class HammingDistancePlot extends React.Component{
   	}
 
   	componentDidMount(){
+
+        const script = document.createElement("script");
+
+        script.src = "https://buttons.github.io/buttons.js";
+        script.async = true;
+
+        document.body.appendChild(script);
+
         this.plot_hamming()
     }
 
@@ -165,7 +173,7 @@ class HammingDistancePlot extends React.Component{
             .call(xAxis)
             .selectAll("text")  
             .style("text-anchor", "end")
-            .attr("dx", "-3.5em")
+            .attr("dx", "-1.5em")
             .attr("dy", "0em")
             .attr("transform", "rotate(-65)" ); 
 
@@ -194,7 +202,7 @@ class HammingDistancePlot extends React.Component{
         					return colors[distance]
         				})
         				.attr("cx", function(d){
-        					return xScale(d[0]) + padding.left - margin.left
+        					return xScale(d[0]) + padding.left
         				})
         				.attr("cy", function(d) {
         					return ((yScale(d[1])) + padding.right - margin.bottom )
@@ -208,7 +216,7 @@ class HammingDistancePlot extends React.Component{
         					  .attr("r", 20)
 
 
-        					const x = padding.left + xScale(d[0]) - margin.left
+        					const x = padding.left + xScale(d[0])
         					const y = (yScale(d[1])) + padding.right - margin.bottom
 
 
@@ -278,7 +286,7 @@ class HammingDistancePlot extends React.Component{
 		        	svg.append("text")
 		        			.attr("class", "value")
 		        			.attr("text-anchor", "middle")
-		        			.attr("x", padding.left + xScale(center[i][0]) - margin.left)
+		        			.attr("x", padding.left + xScale(center[i][0]))
 		        			.attr("y", yScale(center[i][1]) + padding.right - margin.bottom + 4)
 		        			.text(k)
 
@@ -306,8 +314,12 @@ class HammingDistancePlot extends React.Component{
 		        	<input type="submit" value="Submit" />
 		      	</form>
 
-
-  				
+                
+                <div class="container" id="forkButton">
+                <a class="github-button" href="https://github.com/GeneralZYQ/researchable-assignment" data-icon="octicon-repo-forked" aria-label="Fork ntkme/github-buttons on GitHub">
+                Fork
+                </a>
+                </div>
   				</>
 
   				

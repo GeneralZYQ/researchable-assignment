@@ -18,7 +18,8 @@ body {
 
 #forkButton {
 	position: absolute;
-	top: 100px;
+	top: 60px;
 	right: 10px;
-	background-color: #00CC00;
+	background-color: #CC0000;
+	color: white;
 }
